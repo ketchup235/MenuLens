@@ -1,35 +1,54 @@
-{%extends "base.html"%}
-
-{%block body%}
-    <div class="centered-column">
-      <div class="upload-area">
-        <label for="file-upload" style="cursor: pointer;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="200" height="200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 12V4" />
-            <path d="M5 7L8 4L11 7" />
-            <path d="M2 12H14" />
-          </svg>
-        </label>
-      </div>
-      <br>
-      <button type="submit" class="button">Upload PDF</button>
+{%extends "base.html"%} {%block body%}
+<div class="centered-column">
+  <form>
+    <div class="upload-area">
+      <label for="file-upload" style="cursor: pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          width="200"
+          height="200"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M8 12V4" />
+          <path d="M5 7L8 4L11 7" />
+          <path d="M2 12H14" />
+        </svg>
+      </label>
     </div>
-    <input id="file-upload" name="pdf" type=file accept=".pdf" style="display: none;" />
+    <br />
+    <button type="submit" class="button">Submit PDF for Scanning</button>
+  </form>
+</div>
 
-    <br> <br> <br>
+<input
+  id="file-upload"
+  name="pdf"
+  type="file"
+  accept=".pdf"
+  style="display: none"
+/>
 
-    <div class="grid">
-      <div class="filter">Vegan</div>
-      <div class="filter">Vegetarian</div>
-      <div class="filter">Gluten-Free</div>
-      <div class="filter">Pescetarian</div>
-      <div class="filter">Dairy-Free</div>
-      <div class="filter">Nut-Free</div>
-      <div class="filter">Kosher</div>
-      <div class="filter">Halal</div>
-      <div class="filter">Keto</div>
-      <div class="filter">Shellfish-Free</div>
-      <div class="filter">Peanut Free</div>
-      <div class="filter">Wheat-Free</div>
-    </div>
+<br />
+<br />
+<br />
+
+<div class="grid">
+  <div class="filter">Vegan</div>
+  <div class="filter">Vegetarian</div>
+  <div class="filter">Gluten-Free</div>
+  <div class="filter">Pescetarian</div>
+  <div class="filter">Dairy-Free</div>
+  <div class="filter">Nut-Free</div>
+  <div class="filter">Kosher</div>
+  <div class="filter">Halal</div>
+  <div class="filter">Keto</div>
+  <div class="filter">Shellfish-Free</div>
+  <div class="filter">Peanut Free</div>
+  <div class="filter">Wheat-Free</div>
+</div>
 {%endblock body%}
