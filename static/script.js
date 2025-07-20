@@ -10,4 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 150);
         });
     });
+
+    const menu = document.getElementById('file-upload');
+    if (menu) {
+        menu.addEventListener('change', function() {
+            const fileName = this.files[0] ? this.files[0].name : '';
+            document.getElementById('filename').innerText = fileName;
+        });
+    }
 });
