@@ -1,6 +1,6 @@
 {%extends "base.html"%} {%block body%}
 <div class="centered-column">
-  <form>
+  <form action="/upload" method="post" enctype="multipart/form-data">
     <div class="upload-area">
       <label for="file-upload" style="cursor: pointer">
         <svg
@@ -22,6 +22,7 @@
       <br />
       <label id="filename"></label>
     </div>
+    <input type="hidden" name="restrictions" id="restrictions" />
     <button type="submit" class="button">Submit PDF for Scanning</button>
   </form>
 </div>

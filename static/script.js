@@ -18,4 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('filename').innerText = fileName;
         });
     }
+
+    const form = document.querySelector('form'); 
+    const restrictions = document.getElementById('restrictions');
+    form.addEventListener('submit', function() {
+        const selected = Array.from(document.querySelectorAll('.filter.selected')).map(filter => filter.innerText).join(', ');
+        if(restrictions){
+            restrictions.value = selected;
+        }
+    });
 });

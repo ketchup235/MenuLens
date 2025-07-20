@@ -10,6 +10,10 @@ def index():
 @app.route('/upload', methods=['POST'])
 def upload():
     menu= request.files['pdf']
+    restrictions = request.form.get('restrictions')
+    restrictions = [r.strip().lower() for r in restrictions.split(',') if r]
+    
+    
     if menu:
         print("INSERT CODE TO SCRAPE PDF FPR KEYWORDS")
     return render_template('upload.html')
